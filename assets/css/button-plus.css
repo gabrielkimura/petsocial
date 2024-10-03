@@ -1,0 +1,133 @@
+/* Estilo para o botão flutuante de "mais" */
+.float-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff8c42;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.float-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.float-button:hover {
+    background-color: #f06019;
+    transform: scale(1.1);
+}
+
+/* Estilo básico do modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão de fechar */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover, .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Estilos para o formulário no modal */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"], form textarea, form input[type="file"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Alinha o botão horizontalmente ao centro */
+    margin-top: 15px; /* Adiciona um espaço opcional acima do botão */
+}
+
+form button {
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    color: #f06019;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #f06019;
+    color: white;
+}
+
+
+.custom-file-upload-one {
+    border: 2px solid #38AAAB;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #38AAAB;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.custom-file-upload-one:hover {
+    background-color: white;
+    color: #38AAAB;
+}
+
+.custom-file-upload-two {
+    border: 2px solid #F2B811;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #F2B811;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.custom-file-upload-two:hover {
+    background-color: white;
+    color: #F2B811;
+}

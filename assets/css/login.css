@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f6f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #f6f6f9;
+    border-radius: 8px;
+}
+
+.left, .right {
+    padding: 40px;
+    flex: 1;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#f6f6f9;
+}
+
+.pet-image {
+    max-width: 80%;
+    height: auto;
+}
+
+.learn-more {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right h1 {
+    margin-bottom: 20px;
+}
+
+.right form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+.right form p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.right form input {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-login {
+    background-color: #ff6b35;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-register {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.terms {
+    font-size: 12px;
+    margin-top: 40px;
+    text-align: center;
+    color: #555;
+}
+
+footer {
+    margin-top: 200px;
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+}

@@ -1,0 +1,61 @@
+.post-container {
+    margin-left: 220px; /* Cria um espaço para a largura do menu lateral */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding-top: 20px;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.post-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%; /* Ocupa todo o espaço disponível */
+    max-width: 900px; /* Largura máxima da div */
+    max-height: 400px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400; /* Regular, não bold */
+}
+
+.usuario {
+    font-weight: bold;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.post-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ajuste conforme necessário */
+    margin-top: 15px;
+}
+
+.post-images img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    max-height: 250px; /* Ajuste a altura máxima conforme necessário */
+    width: 300px; /* Permite que a largura da imagem ajuste automaticamente */
+    height: 300px; /* Permite que a altura da imagem ajuste automaticamente */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.icons i {
+    font-size: 20px;
+    cursor: pointer;
+}

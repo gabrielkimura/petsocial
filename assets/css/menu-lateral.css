@@ -1,33 +1,21 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
+/* Estilo para a barra lateral */
 .sidebar {
-    position: relative;
+    position: fixed;
     height: 100vh;
     width: 250px;
-    background-color: #FF6700;
-    padding-top: 30px;
-    color: black;
+    padding: 0;
+    margin: 0;
+    top:0;
+    left:0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #ff8c42;
+    font-family: "Cabin", sans-serif;
+    font-weight: bold;
 }
 
-.sidebar a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    display: block;
-}
-
-.sidebar .menu-item:hover {
-    background-color: #FF8C42;
-}
-
-.sidebar .active {
-    background-color: #FF8C42;
-}
-
+/* Estilo do logo */
 .sidebar .logo-item {
     display: flex;
     align-items: center;
@@ -37,13 +25,44 @@ body {
 .sidebar .logo-item img {
     width: 150px;
     height: 150px;
-    margin-left: 45px ;
+    margin-left: 30px;
 }
 
+/* Estilo dos itens de menu */
 .sidebar .menu-item {
     display: flex;
+    width: 100%;
     align-items: center;
     padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    display: inline-block;
+    transition: all 0.3s ease;
+    width: fit-content;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.sidebar .menu-item a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    display: inline-block;
+    transition: all 0.3s ease;
+    width: fit-content;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.sidebar .menu-item:hover {
+    background-color: #F06019;
 }
 
 .sidebar .menu-item img {
@@ -52,17 +71,20 @@ body {
     margin-right: 15px;
 }
 
+/* Estilo para o footer */
 .sidebar .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin-top: auto; /* Move o footer para o final da sidebar */
     padding: 15px;
-    margin-bottom: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
+    background-color: black; /* Fundo preto */
+    color: white; /* Cor do texto */
+    border-radius: 20px; /* Bordas arredondadas */
     text-align: center;
-    color: white;
-    background-color: #000;
-    border-radius: 1rem;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 4px;
+}
+
+.content {
+    margin-left: 220px; /* Espaço para o menu lateral */
+    padding: 20px;
 }

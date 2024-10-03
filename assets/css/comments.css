@@ -1,0 +1,88 @@
+.comments {
+    display: flex;
+    justify-content: left;
+    gap: 50px; /* Ajuste conforme necessário */
+    margin-top: 15px;
+}
+
+.comments img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    max-height: 250px; /* Ajuste a altura máxima conforme necessário */
+    width: 25px; /* Permite que a largura da imagem ajuste automaticamente */
+    height: 25px; /* Permite que a altura da imagem ajuste automaticamente */
+    object-fit: cover;
+}
+
+
+/* Estilo básico do modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão de fechar */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover, .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Estilos para o formulário no modal */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"], form textarea, form input[type="file"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Alinha o botão horizontalmente ao centro */
+    margin-top: 15px; /* Adiciona um espaço opcional acima do botão */
+}
+
+form button {
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #ff8c42;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #f06019;
+    color: white;
+}
