@@ -13,10 +13,6 @@
         <a href="ajude.php">Ajude-nos</a>
     </div>
     <div class="menu-item">
-        <img src="assets/img/diretriz.png" alt="diretrizes">
-        <a href="diretriz.php">Diretrizes</a>
-    </div>
-    <div class="menu-item">
         <img src="assets/img/sobre.png" alt="sobre">
         <a href="sobre.php">Sobre nós</a>
     </div>
@@ -29,7 +25,7 @@
             color: #ff8c42;
             background-color: black;
             transition: background-color 0.3s ease, color 0.3s ease;">
-            ana.mariasouza
+            anamaria.souza
         </a>
     </div>
     <div class="logout">

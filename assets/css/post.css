@@ -16,7 +16,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     width: 100%; /* Ocupa todo o espaço disponível */
-    max-width: 900px; /* Largura máxima da div */
+    max-width: 700px; /* Largura máxima da div */
     max-height: 400px;
     font-family: 'Nunito', sans-serif;
     font-weight: 400; /* Regular, não bold */
@@ -24,6 +24,11 @@
 
 .usuario {
     font-weight: bold;
+}
+
+.usuario a{
+    color: black !important; /* Define o texto do link como preto */
+    text-decoration: none;
 }
 
 .avatar {
@@ -58,4 +63,22 @@
 .icons i {
     font-size: 20px;
     cursor: pointer;
+}
+
+.delete {
+    display: flex;
+    justify-content: center; /* Centraliza a lixeira horizontalmente */
+    margin-top: 10px; /* Espaço entre a imagem e a lixeira */
+}
+
+.delete img {
+    width: 25px !important; /* Tamanho fixo da lixeira */
+    height: 25px !important; /* Garante proporções consistentes */
+    cursor: pointer; /* Mostra que a lixeira é clicável */
+    object-fit: contain; /* Evita distorção */
+    transition: transform 0.2s; /* Efeito ao passar o mouse */
+}
+
+.delete img:hover {
+    transform: scale(1.2); /* Faz um leve zoom ao passar o mouse */
 }

@@ -24,20 +24,35 @@
         ?>
         <div class="post-container">
             <div class="post-content">
-                <div class="usuario"><?=$data["usuario"];?></div>
-                <div class="descricao"><?=$data["descricao"];?></div>
-                <div class="post-images"><img src="<?=$data["image1"];?>">
-                <?php 
-                if (is_null($data["image2"])){ ?>
-                  </div>
-                <?php
-                }else{ ?>
-                    <img src="<?=$data["image2"];?>"></div>
-                <?php 
-                }?>
+                <div class="usuario">
+                    <a href="comentario.php" class="comentario"><?=$data["usuario"];?></a>
+                </div>
+                <div class="descricao"><?=$data["descricao"];?>
+                </div>
+                <div class="post-images">
+                    <img src="<?=$data["image1"];?>" alt="Imagem principal">
+                        <?php if (!is_null($data["image2"])) { ?>
+                        <img src="<?=$data["image2"];?>" alt="Imagem adicional">
+                        <?php } ?>
+                </div>
+                <br>
+                <div class="delete">
+                    <a href="#" class="excluir">
+                    <img src="assets/img/delete.png" alt="Ícone de lixeira" style="width: 30px; height: 30px; object-fit: contain;">
+                    <?php
+                        try {
+                            // Prepara a exclusão no banco de dados
+                            $sql = "DELETE FROM post WHERE postId = 5";
+                            $stmt = $db->query($sql);
+                        } catch (Exception $e) {
+                            echo "Erro ao excluir: " . $e->getMessage();
+                        }
+                     ?>
+                    </a>
+                </div>
             </div>
-            </div>
-        <?php
+        </div>
+        <?php 
         }
         ?> 
     <!-- iniciando e fechando pop-up -->

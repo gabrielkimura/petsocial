@@ -1,0 +1,14 @@
+.delete {
+    display: flex;
+    justify-content: left;
+    gap: 50px; /* Ajuste conforme necessário */
+    margin-top: 15px;
+}
+
+.delete img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    max-height: 250px; /* Ajuste a altura máxima conforme necessário */
+    width: 25px; /* Permite que a largura da imagem ajuste automaticamente */
+    height: 25px; /* Permite que a altura da imagem ajuste automaticamente */
+    object-fit: cover;
+}

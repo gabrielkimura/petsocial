@@ -27,7 +27,7 @@
     <?php include("./assets/css/menu.php");?>
     <?php
        
-        $sql = "SELECT p.userId AS id, p.descricao AS descricao, u.usuario AS usuario, p.image1 AS image1, p.image2 AS image2, u.tipoUser AS tipo 
+        $sql = "SELECT p.userId AS id, p.descricao AS descricao, u.usuario AS usuario, p.image1 AS image1, p.image2 AS image2, u.tipoUser AS tipo, p.postId as postId
             FROM post p JOIN user u ON p.userId = u.userId WHERE u.tipoUser = 'Fisico';";
         $consulta = $db->query($sql);
         $count = 0;
@@ -36,17 +36,16 @@
         ?>
         <div class="post-container">
             <div class="post-content">
-                <div class="usuario"><?=$data["usuario"];?></div>
+                <div class="usuario">
+                    <a href="comentario.php"><?=$data["usuario"];?></a>
+                </div>
                 <div class="descricao"><?=$data["descricao"];?></div>
-                <div class="post-images"><img src="<?=$data["image1"];?>">
-                <?php 
-                if (is_null($data["image2"])){ ?>
-                  </div>
-                <?php
-                }else{ ?>
-                    <img src="<?=$data["image2"];?>"></div>
-                <?php 
-                }?>
+                <div class="post-images">
+                    <img src="<?=$data["image1"];?>"></a>
+                    <?php if (!is_null($data["image2"])) { ?>
+                    <img src="<?=$data["image2"];?>">
+                    <?php } ?>
+                </div>
                 <div class="comments">
                     <a href="#" class="comentario">
                         <img src="assets/img/comment.png" alt="Mais"></a>
@@ -56,9 +55,10 @@
                                 <span class="close">&times;</span>
                                 <h2>Comentário</h2>
                                 <form id="commentForm">
-                                    <textarea id="commentText" rows="4" cols="50" required></textarea>
-                                    <button type="submit">Enviar Comentário</button>
+                                    <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea>
+                                    <button type="submit" name="btn-submit">Enviar Comentário</button>
                                 </form>
+                                <!-- insert -->
                             </div>
                         </div>
                     <script src="assets/javascript/comment.js"></script>
